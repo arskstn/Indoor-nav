@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug Server - 3D Positioning</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/three.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/OrbitControls.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/socket.io.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script>
+        var beaconsData = {{ beacons|tojson|safe }};
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Beacons</h2>
+        <ul>
+            {% for beacon in beacons %}
+            <li>
+                <span class="beacon-id">Beacon {{ beacon.id }}</span><br>
+                <span class="beacon-ip">IP: {{ beacon.ip }}</span><br>
+                <div class="battery">
+                    <div class="battery-level" id="battery-level-{{ beacon.id }}" style="width: {{ beacon.battery }}%;"></div>
+                    <span class="battery-text" id="battery-text-{{ beacon.id }}">{{ beacon.battery }}%</span>
+                </div>
+                <span class="beacon-rssi">Wi-Fi RSSI: <span id="rssi-{{ beacon.id }}">N/A</span> dBm</span><br>
+                <span class="beacon-voltage">Voltage: <span id="voltage-{{ beacon.id }}">N/A</span> V</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="main-container">
+        <div id="scene-container"></div>
+        <div class="log-container">
+            <h3>Logs</h3>
+            <div id="log-content"></div>
+        </div>
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'929ef5a1bd7cbd1c',t:'MTc0MzU4MjU3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
