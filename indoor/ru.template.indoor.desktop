@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.template.indoor
+Exec=/usr/bin/ru.template.indoor
+Name=Template
+Name[ru]=Где_я
+
+[X-Application]
+Permissions=Sensors;DeviceInfo;Bluetooth;Internet;Location;UserDirs;WebView
+OrganizationName=ru.template
+ApplicationName=indoor
+ExecDBus=/usr/bin/ru.template.indoor
