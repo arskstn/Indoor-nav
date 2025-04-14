@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.template.RSSI_test
+Exec=/usr/bin/ru.template.RSSI_test
+Name=Template
+Name[ru]=хде я?
+
+[X-Application]
+Permissions=Sensors;PushNotifications;DeviceInfo;Bluetooth;Internet;Location;UserDirs;WebView
+OrganizationName=ru.template
+ApplicationName=RSSI_test
+ExecDBus=/usr/bin/ru.template.RSSI_test
