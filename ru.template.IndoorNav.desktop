@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.template.IndoorNav
+Exec=/usr/bin/ru.template.IndoorNav
+Name=Indoor Nav
+Name[ru]=Indoor Навигация
+
+[X-Application]
+Permissions=Sensors;DeviceInfo;Bluetooth;Camera;Location;UserDirs
+OrganizationName=ru.template
+ApplicationName=IndoorNav
+ExecDBus=/usr/bin/ru.template.IndoorNav
