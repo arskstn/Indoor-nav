@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Navigation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Indoor Navigation System</h1>
+        
+        <div id="map-container">
+            <img id="map-image" src="{{ url_for('static', filename='kartasmall.png') }}">
+            <canvas id="map-grid"></canvas>
+            <div id="player"></div>
+        </div>
+        
+        <div id="log-console">
+            <h3>Position Logs <span id="log-count">0</span></h3>
+            <div id="log-content"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script>
+        const GRID_COLS = {{ grid_cols }};
+        const GRID_ROWS = {{ grid_rows }};
+    </script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>
