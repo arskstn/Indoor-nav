@@ -1,0 +1,3 @@
+auroraos
+subprojects
+rpmbuild

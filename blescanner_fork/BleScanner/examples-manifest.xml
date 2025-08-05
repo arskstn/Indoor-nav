@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generated file. This file is used by SDK to show example inside Welcome screen. It is not the part of the example. -->
+<instructionals module="Aurora OS Examples">
+ <examples>
+  <example projectPath="ru.auroraos.BleScanner.subdirs.pro" name="BLE Scanner" imageUrl="/home/ars/.local/share/AuroraOS-SDK-5.1.5.105/QtCreator/Aurora OS Examples/BleScanner/example-icon.png">
+   <description><![CDATA[The project provides an example of using SimpleBLE library to scaning BLE devices.]]></description>
+   <tags>AuroraOS,Bluetooth LE,example</tags>
+   <platforms>Mer</platforms>
+   <preferredFeatures>Mer.Wizard.Feature.Emulator</preferredFeatures>
+   <fileToOpen>/app/qml/BleScanner.qml</fileToOpen>
+  </example>
+ </examples>
+</instructionals>

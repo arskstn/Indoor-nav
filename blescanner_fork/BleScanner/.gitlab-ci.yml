@@ -1,0 +1,17 @@
+stages:
+  - readme_cspell_check
+  - build
+  - sign
+  - validation
+
+spell-checking:
+  stage: readme_cspell_check
+  tags:
+    - aurora_psdk_runner
+  script:
+    - sudo cp ./gitlab-ci/project-words.txt /home/gitlab-runner/cspell 
+    - /home/gitlab-runner/.nvm/versions/node/v22.14.0/bin/npx cspell --config /home/gitlab-runner/cspell/cspell.json "./README.md" "./README.ru.md" --show-suggestions
+    
+include:
+  - local: 'gitlab-ci/**.yml'
+

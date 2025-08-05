@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.auroraos.BleScanner
+Exec=/usr/bin/ru.auroraos.BleScanner
+Name=BLE Scanner
+Name[ru]=BLE Сканер
+
+[X-Application]
+Permissions=Bluetooth;
+OrganizationName=ru.auroraos
+ApplicationName=BleScanner
+ExecDBus=/usr/bin/ru.auroraos.BleScanner

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/kartasmall.png</file>
+        <file>icons/kartasmall_grid.csv</file>
+    </qresource>
+</RCC>
